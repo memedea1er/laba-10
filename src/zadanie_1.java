@@ -18,7 +18,7 @@ public class zadanie_1 {
         return t;
     }
     public static void mas(char[] array) {
-        try(FileReader reader = new FileReader("text.txt"))
+        try(FileReader reader = new FileReader("text1.txt"))
         {
             int c;
             while((c = reader.read(array))>0){
