@@ -17,23 +17,23 @@ public class zadanie_1 {
         }
         return t;
     }
-    public static void mas(char[] array) {
-        try(FileReader reader = new FileReader("text1.txt"))
-        {
-            int c;
-            while((c = reader.read(array))>0){
 
-                if(c < 10){
+    public static void mas(char[] array) {
+        try (FileReader reader = new FileReader("text1.txt")) {
+            int c;
+            while ((c = reader.read(array)) > 0) {
+
+                if (c < 10) {
                     array = Arrays.copyOf(array, c);
                 }
                 System.out.println(array);
             }
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
 
             System.out.println(ex.getMessage());
         }
     }
+
     public static int abc(char[] array, char s) {
         int a = 0;
         for (int i = 0; i < 10; i++) {
