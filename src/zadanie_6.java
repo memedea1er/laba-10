@@ -66,6 +66,6 @@ public class zadanie_6 {
                 c++;
             }
         }
-        write("\nКоличество машин, удовлетворяющих критериям: " + Integer.toString(c), true);
+        write("\nКоличество машин, удовлетворяющих критериям: " + c, true);
     }
 }
