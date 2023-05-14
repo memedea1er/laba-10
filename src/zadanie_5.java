@@ -37,7 +37,8 @@ public class zadanie_5 {
                 nas=i;
             }
             if (nas!=-1) {
-                if (!Character.isLetter(st.charAt(i+1)) & st.charAt(i)==st.charAt(nas) & Character.isLetter(st.charAt(nas)) & nas!=i) {
+                if ((st.charAt(i)==st.charAt(nas) | st.charAt(i)==Character.toLowerCase(st.charAt(nas)) | st.charAt(i)==Character.toUpperCase(st.charAt(nas))) &
+                        !Character.isLetter(st.charAt(i+1)) & Character.isLetter(st.charAt(nas)) & nas!=i) {
                     t=true;
                 }
             }
