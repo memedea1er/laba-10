@@ -17,8 +17,7 @@ public class zadanie_3 {
     public static void main(String[] args) {
         String st = file() + " ";
         for (int i = 0; i < st.length(); i++) {
-            char ch = st.charAt(i);
-            if ((ch == ' ' | i == st.length() - 1)) {
+            if ((st.charAt(i) == ' ' | i == st.length() - 1)) {
                 int j = 1;
                 if (Character.isLowerCase(st.charAt(i - j))) {
                     while (i - j != 0) {
