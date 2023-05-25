@@ -17,7 +17,17 @@ public class zadanie_1 {
         }
         return t;
     }
+    public static void write(String a,boolean bo) {
+        try(FileWriter writer = new FileWriter("text1.txt", bo))
+        {
+            writer.append(a);
+            writer.flush();
+        }
+        catch(IOException ex){
 
+            System.out.println(ex.getMessage());
+        }
+    }
     public static void mas(char[] array) {
         try (FileReader reader = new FileReader("text1.txt")) {
             int c;
@@ -109,11 +119,11 @@ public class zadanie_1 {
                 break;
             }
         }
-        System.out.println("а) " + abc(array, ' '));
-        System.out.println("б) " + abc(array, b));
-        System.out.println("в) " + c(array, c));
-        System.out.println("г) " + (d(array, "но") | d(array, "он")));
-        System.out.println("д) " + e(array));
-        System.out.println("e) " + (f(array, i, l) & f(array, j, l)));
+        write("\nа) " + abc(array, ' '), true);
+        write("\nб) " + abc(array, b), true);
+        write("\nв) " + c(array, c),true);
+        write("\nг) " + (d(array, "но") | d(array, "он")),true );
+        write("\nд) " + e(array),true);
+        write("\ne) " + (f(array, i, l) & f(array, j, l)),true);
     }
 }
